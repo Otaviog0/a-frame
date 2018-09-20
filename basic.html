@@ -1,0 +1,23 @@
+<script src="aframe/build/aframe.min.js"></script>
+<script src='aframe/aframe-ar.js'></script>
+<!-- <script>ARjs.Context.baseURL = '../../three.js/'</script> -->
+
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded>
+		<a-anchor hit-testing-enabled='true'>
+			<a-image src="images.jpeg" position='0 0.5 0' rotation="-90 0 0"></a-image>
+		</a-anchor>
+		<!-- https://medium.com/w3bvr/learning-a-frame-adding-image-textures-5dbb7c41288 -->
+		<a-marker  type='pattern' url='pattern-marker.patt'>
+			<!-- mundo -->
+			<a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg"
+			 radius="1" segments-height="25"></a-sphere>
+			 <!-- <a-box position="-1 0.5 -1" rotation="0 45 0" width="0.5" height="0.5" color="#4CC3D9"></a-box>
+			 <a-sphere position="0 1.25 1.5" radius="1" color="#EF2D5E"></a-sphere>
+			 <a-cylinder position="1 0.75 0" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+			 <a-plane position="0 0 0" rotation="-90 0 0" width="3" height="3" color="#7BC8A4"></a-plane>
+			 <a-sky color="#ECECEC"></a-sky> -->
+		</a-marker>
+		<a-camera-static/>
+	</a-scene>
+</body>
